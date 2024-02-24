@@ -20,22 +20,23 @@ function formatTime() { //Credits to himika#0001 and never#0001
 
 client.on('ready', async () => {
   console.clear();
-  console.log(`${client.user.tag} - rich presence started!`);
+  console.log(${client.user.tag} - rich presence started!);
 
   const r = new Discord.RichPresence()
-    .setApplicationId('')
+    .setApplicationId('1103491371005915176')
     .setType('STREAMING')
-    .setURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ') //Must be a youtube video link 
-    .setState('Recording')
-    .setName('')
-    .setDetails(`Valorant [${formatTime()}]`)
-    .setStartTimestamp(Date.now())
- .setAssetsLargeImage('') //You can put links in tenor or discord and etc.
-    .setAssetsLargeText('Boring') //Text when you hover the Large image
-    .setAssetsSmallImage('') //You can put links in tenor or discord and etc.
-    .setAssetsSmallText('Twitch') //Text when you hover the Small image
-    .addButton('Watch', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-    .addButton('Donate', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    .setURL('https://www.youtube.com/watch?v=zdfacEpzDIA') //Must be a youtube video link 
+    .setState('agony')
+    .setName('worstgen')
+    .setDetails('black star')
+
+
+ .setAssetsLargeImage('https://i.pinimg.com/originals/f5/8b/0d/f58b0d9db0c1167ba887316b0657b22e.gif') //You can put links in tenor or discord and etc.
+    .setAssetsLargeText('shadow') //Text when you hover the Large image
+    .setAssetsSmallImage('https://i.pinimg.com/originals/62/55/0f/62550f0baeb01b9a1a9683d2ba600c17.gif') //You can put links in tenor or discord and etc.
+    .setAssetsSmallText('ok') //Text when you hover the Small image
+    .addButton('silent', 'https://youtu.be/MgKebqcV8o4?si=dgHDldkwXhPvTXw4')
+    .addButton('cart', 'https://youtu.be/cb5jYBG71-0?si=r3ZDEmsXqMRAL-_y');
 
   client.user.setActivity(r);
   client.user.setPresence({ status: "dnd" }); //dnd, online, idle, offline
@@ -44,7 +45,7 @@ client.on('ready', async () => {
   setInterval(() => {
     const newTime = formatTime();
     if (newTime !== prevTime) {
-      const newDetails = ` [${newTime}]`;
+      const newDetails = entry log ;
       r.setDetails(newDetails);
       client.user.setActivity(r);
       prevTime = newTime;
