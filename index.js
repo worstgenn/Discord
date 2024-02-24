@@ -4,13 +4,13 @@ const client = new Discord.Client({
   checkUpdate: false
 });
 
-const keepAlive = require('./server.js');
+const keepAlive = require('./server (1).js');
 keepAlive();
 
 function formatTime() { //Credits to himika#0001 and never#0001
   const date = new Date();
   const options = {
-    timeZone: 'America/New_York', //https://www.zeitverschiebung.net/en/ and find your city and enter here
+    timeZone: 'America/New_York', // https://www.zeitverschiebung.net/en/ and find your city and enter here
     hour12: true,
     hour: 'numeric',
     minute: 'numeric'
@@ -20,31 +20,31 @@ function formatTime() { //Credits to himika#0001 and never#0001
 
 client.on('ready', async () => {
   console.clear();
-  console.log(`${client.user.tag} - rich presence started!`);
+  console.log(${client.user.tag} - rich presence started!);
 
   const r = new Discord.RichPresence()
-    .setApplicationId('')
+    .setApplicationId('1210843740210728960')
     .setType('STREAMING')
-    .setURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ') //Must be a youtube video link 
-    .setState('Recording')
-    .setName('')
-    .setDetails(`Valorant [${formatTime()}]`)
+    .setURL('https://youtu.be/MgKebqcV8o4?si=utGb5zMaLbkWoRnx') // Must be a youtube video link 
+    .setState('agony')
+    .setName('worstgen')
+    .setDetails(black star [${formatTime()}])
     .setStartTimestamp(Date.now())
- .setAssetsLargeImage('') //You can put links in tenor or discord and etc.
-    .setAssetsLargeText('Boring') //Text when you hover the Large image
-    .setAssetsSmallImage('') //You can put links in tenor or discord and etc.
-    .setAssetsSmallText('Twitch') //Text when you hover the Small image
-    .addButton('Watch', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-    .addButton('Donate', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    .setAssetsLargeImage('f58b0d9db0c1167ba887316b0657b22e.gif') // You can put links in tenor or discord and etc.
+    .setAssetsLargeText('lost') // Text when you hover the Large image
+    .setAssetsSmallImage('62550f0baeb01b9a1a9683d2ba600c17.gif') // You can put links in tenor or discord and etc.
+    .setAssetsSmallText('strain') // Text when you hover the Small image
+    .addButton('geekin', 'https://youtu.be/cb5jYBG71-0?si=leOBRMponQLvbkyG')
+    .addButton('out', 'https://youtu.be/hzk3kaSuKPk?si=Y8yjzeIGjyUtaQsw');
 
   client.user.setActivity(r);
-  client.user.setPresence({ status: "dnd" }); //dnd, online, idle, offline
+  client.user.setPresence({ status: "dnd" }); // dnd, online, idle, offline
 
   let prevTime = null;
   setInterval(() => {
     const newTime = formatTime();
     if (newTime !== prevTime) {
-      const newDetails = ` [${newTime}]`;
+      const newDetails = black star [${newTime}];
       r.setDetails(newDetails);
       client.user.setActivity(r);
       prevTime = newTime;
