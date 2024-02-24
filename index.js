@@ -23,19 +23,19 @@ client.on('ready', async () => {
   console.log(`${client.user.tag} - rich presence started!`);
 
   const r = new Discord.RichPresence()
-    .setApplicationId('')
+    .setApplicationId('1210843740210728960')
     .setType('STREAMING')
-    .setURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ') //Must be a youtube video link 
-    .setState('Recording')
-    .setName('')
-    .setDetails(`Valorant [${formatTime()}]`)
+    .setURL('https://youtu.be/MgKebqcV8o4?si=utGb5zMaLbkWoRnx') //Must be a youtube video link 
+    .setState('agony')
+    .setName('worstgen')
+    .setDetails(`black star [${formatTime()}]`)
     .setStartTimestamp(Date.now())
- .setAssetsLargeImage('') //You can put links in tenor or discord and etc.
-    .setAssetsLargeText('Boring') //Text when you hover the Large image
-    .setAssetsSmallImage('') //You can put links in tenor or discord and etc.
-    .setAssetsSmallText('Twitch') //Text when you hover the Small image
-    .addButton('Watch', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-    .addButton('Donate', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+ .setAssetsLargeImage('https://cdn.discordapp.com/attachments/1096914353925656748/1210844677855518822/f58b0d9db0c1167ba887316b0657b22e.gif?ex=65ec09fb&is=65d994fb&hm=4f5450302e557f3b6d5b4a0a22835420e77aa78f86fdab88a92b0d86946c43e7&') //You can put links in tenor or discord and etc.
+    .setAssetsLargeText('lost') //Text when you hover the Large image
+    .setAssetsSmallImage('https://cdn.discordapp.com/attachments/1096914353925656748/1210844666271105105/62550f0baeb01b9a1a9683d2ba600c17.gif?ex=65ec09f8&is=65d994f8&hm=5a8a25c525dd72e7ead2f1655f7692892cefa49ffc4af462b602e876c7903b1f&') //You can put links in tenor or discord and etc.
+    .setAssetsSmallText('strain') //Text when you hover the Small image
+    .addButton('geekin', 'https://youtu.be/cb5jYBG71-0?si=leOBRMponQLvbkyG')
+    .addButton('out', 'https://youtu.be/hzk3kaSuKPk?si=Y8yjzeIGjyUtaQsw');
 
   client.user.setActivity(r);
   client.user.setPresence({ status: "dnd" }); //dnd, online, idle, offline
@@ -44,7 +44,7 @@ client.on('ready', async () => {
   setInterval(() => {
     const newTime = formatTime();
     if (newTime !== prevTime) {
-      const newDetails = ` [${newTime}]`;
+      const newDetails = `black star [${newTime}]`;
       r.setDetails(newDetails);
       client.user.setActivity(r);
       prevTime = newTime;
